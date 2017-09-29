@@ -1,0 +1,380 @@
+3a50b90 (HEAD -> cm-14.1_dev, origin/cm-14.1_dev) Revert "drivers: power: Remove counterproductive OEM changes"
+eaa3ab3 Revert "drivers: cpufreq: Don't underclock perf cluster"
+f490424 z2x: defconfig: Updates defconfig
+ec5f01b z2x: defconfig: ARM64: configs: Remove PANIC_ON_SCHED_BUG and PANIC_ON_RT_THROTTLING
+1aa7026c z2x: defconfig: Enable CONFIG_STRIP_ASM_SYMS
+8efb8ea z2x: defconfig: Enable WESTWOOD+ and set it as default.
+058a151 z2x: defconfig: Disable conservative CPU governor
+d3c106e z2x: defconfig: Import CONFIGs from android-recommend.cfg.
+188d581 z2x: defconfig: Import CONFIGs from android-base.cfg.
+10fafd5 z2x: defconfig: Back to CONFIG_CC_OPTIMIZE_FOR_SIZE
+aa0fcc3 z2x: defconfig: ARM64: configs: Re-enable CONFIG_MSM_BCL
+4400ad1 z2x: defconfig: Change camera modules
+26af918 z2x: defconfig: Set the correct CONFIG_NR_CPUS for msm8996
+b58fc37 z2x: defconfig: Enable CONFIG_SDCARD_FS
+ab1c53e z2x: Remove unused/debug CONFIGs
+a75c268 drivers: cpufreq: Don't underclock perf cluster
+60dc40d arm: dts: Squash revert of panel flip
+3768e67 f2fs: add lazytime mount option
+cdc0158 vfs: add support for a lazytime mount option
+2d4f004 f2fs: hurry up to issue discard after io interruption
+c7dede8 f2fs: fix to show correct discard_granularity in sysfs
+acb5625 f2fs: detect dirty inode in evict_inode
+4c50c9f f2fs: clear radix tree dirty tag of pages whose dirty flag is cleared
+6429301 f2fs: speed up gc_urgent mode with SSR
+8b98460 f2fs: better to wait for fstrim completion
+1d81e83 f2fs: avoid race in between read xattr & write xattr
+22b144e f2fs: make get_lock_data_page to handle encrypted inode
+aba0833 f2fs: use generic terms used for encrypted block management
+9e17909 f2fs: introduce f2fs_encrypted_file for clean-up
+18c98e9 Revert "f2fs: add a new function get_ssr_cost"
+b7e9e67 f2fs: constify super_operations
+717f83f f2fs: fix to wake up all sleeping flusher
+e47c1ad f2fs: avoid race in between atomic_read & atomic_inc
+5bb6868 f2fs: remove unneeded parameter of change_curseg
+947f5a4 f2fs: update i_flags correctly
+9b5115f f2fs: don't check inode's checksum if it was dirtied or writebacked
+3b490b0 f2fs: don't need to update inode checksum for recovery
+0cd51f5 f2fs: trigger fdatasync for non-atomic_write file
+c526560 f2fs: fix to avoid race in between aio and gc
+953c963 f2fs: wake up discard_thread iff there is a candidate
+b29ae66 f2fs: return error when accessing insane flie offset
+bbaba1e f2fs: trigger normal fsync for non-atomic_write file
+c21e2f0 f2fs: clear FI_HOT_DATA correctly
+36aecf8 f2fs: fix out-of-order execution in f2fs_issue_flush
+bae510d f2fs: issue discard commands if gc_urgent is set
+296415d f2fs: remove unused function overprovision_sections
+21e9591 f2fs: check hot_data for roll-forward recovery
+0a14a3b f2fs: add tracepoint for f2fs_gc
+a07f657 f2fs: retry to revoke atomic commit in -ENOMEM case
+9b0d2a7 f2fs: let fill_super handle roll-forward errors
+dec9919 f2fs: merge equivalent flags F2FS_GET_BLOCK_[READ|DIO]
+44927d2 f2fs: support journalled quota
+e005e06 f2fs: fix potential overflow when adjusting GC cycle
+6303c79 f2fs: avoid unneeded sync on quota file
+a0945ba f2fs: introduce gc_urgent mode for background GC
+ce9df31 f2fs: fix the size value in __check_sit_bitmap
+3d6077e f2fs: add app/fs io stat
+717525f f2fs: do not change the valid_block value if cur_valid_map was wrongly set or cleared
+d11806f f2fs: update cur_valid_map_mir together with cur_valid_map
+e97eac1 f2fs: use printk_ratelimited for f2fs_msg
+1f9f0ee f2fs: expose features to sysfs entry
+acb0770 f2fs: support inode checksum
+8c5cd5b f2fs: return wrong error number on f2fs_quota_write
+af74788 f2fs: provide f2fs_balance_fs to __write_node_page
+59b826c f2fs: introduce f2fs_statfs_project
+a80cd23 f2fs: don't need to wait for node writes for atomic write
+8f0b8a1 f2fs: avoid naming confusion of sysfs init
+4ce003d f2fs: support project quota
+9954997 f2fs: record quota during dot{,dot} recovery
+13ae86e f2fs: enhance on-disk inode structure scalability
+85e2341 f2fs: make max inline size changeable
+1a51e7c f2fs: preserve i_mode if __f2fs_set_acl() fails
+e5b14b9 f2fs: alloc new nids for xattr block in recovery
+f119ddf f2fs: spread struct f2fs_dentry_ptr for inline path
+c386dd8 f2fs: remove unused input parameter
+e5ed92b Enable CONFIG_STRIP_ASM_SYMS.
+c8ab25b Enable WESTWOOD+ and set it as default.
+7d6f092 Disable conservative CPU governor
+bd2e05a Import CONFIGs from android-recommend.cfg.
+e78a7f2 Import CONFIGs from android-base.cfg.
+5205216 Update android-{base,recommend}.cfg files using https://android.googlesource.com/kernel/configs as source.
+52b04df Back to CONFIG_CC_OPTIMIZE_FOR_SIZE.
+c13073c z2_row: Fix flip panel
+0ea2b50 Flip panel
+9c87f1c fs: add COMPATIBLE_IOCTL(ENABLE_MI2S_CLK) for MI2S_CLK
+14bc776e ASoc: wcd9335: initialize req_freq
+3c8e80f msm: isp: Initialize debug_state variable
+e6ff076 msm: camera: Fix memleak and invalid access
+9e676d5 msm: camera: avoid invalid memory access
+1d64f95 msm: camera: Fix kernel overwrite GET_BUF_BY_IDX ioctl
+f559ff7 ARM64: configs: Re-enable CONFIG_MSM_BCL.
+2c36985 drivers: staging: Update qcacld-2.0 driver
+351412e Merge tag 'LA.UM.5.5.r1-05800-8x96.0' into HEAD
+65f0d82 Restore edits from 901bb74f4506cd085aacf6e4c1723d3a3e89398b
+c47ebb4 msm: isp: Fix pingpong mismatch issue
+c5d64ed Remove duplicate references to CONFIG_MSMB_CAMERA from commit b2592c46caf4a3f7f84ab21d8715ce8340d22115.
+563d4a7 msm: camera: AV timer support for HAL3
+2b07fc09 msm: camera: isp: fix a cts test failure due to framedrop pattern
+71d5617 msm: camera: isp: Handle array out of bounds
+bf38e9a msm-camera: Set proper return code in sensor wait for probe
+c5b953e msm: camera: Fix KW error.
+53721bf msm-camera: Validation of input parameter
+5d2be7a msm: camera: sensor: Validate eeprom_name string length.
+c141e42 msm: camera: Fix KW errors.
+be1a92a msm: camera_v2: Fix a return code issue in smmu mapping
+ba743ca msm: camera: Add error check for cmd in IOCTL.
+e842ba1 msm:camera: Enable/Disable camera daemon
+be6573c msm: camera: Return HAL buffer to fix drain issues
+f041208 Power: Enable/Disable power collapse after camera open
+c5a7f48 msm: sensor: ois: add conditional check for ioctl
+0625708 msm: camera: fix off-by-one overflow in msm_isp_get_bufq
+f576604 msm: camera: Make use of mutex lock to avoid race condition
+7a91a2e msm: camera: Bound check for num_of_stream.
+74418be msm: sensor: Fix to validate the settings size in flash
+f34457e msm: camera: sensor:validating the flash initialization parameters
+94c5e9c msm: sensor: actuator: add conditional check for ioctl
+577d0b5 msm: sensor: Fix for variable being de-referenced without proper check
+e3656f9 msm: ispif: fix device crash during dumping io register
+6ca7308 msm: sensor: validating the flash initialization parameters
+fe49d06 msm: camera: Use mutex lock to avoid race condition
+95e5696 msm: camera: validate num_streams in stream_cfg_cmd before using it
+9f8ebc5 msm:camera: correct stats query out of boundary
+d5c1d32 msm: camera: isp: Avoid information leak in ISPIF
+dd83974 msm: camera: fix untrusted pointer for power down setting
+292786b msm: camera: isp: Check userspace parameters
+4bea088 msm: camera: isp: Fix memory leaks in vfe probe
+8779da8 msm: camera: Prevent info leak in kernel driver.
+475c79d msm: isp: increase UB size for isp40
+08277ec msm: camera: sensor: Validate csid lane count
+d008c66 msm: ispif: fix a bug in checking the validity of vfe intf
+fb925dc msm: camera: isp: fix for out of bound access array
+7aece6c msm: isp: fix for potentitial array out of bound access
+03edb38 msm: camera: cpp: Fixing Heap overflow in output buffer
+feb90a16 msm: camera: fix Information leak
+49af507 msm: camera: Add check to ensure task wont hog CPU
+1d5e5a9 msm: camera: sensor: Validate destination step position
+330a593 msm: camera: Validate size param before allocating memory
+1d0aacf msm: camera: cpp: Avoid exposing kernel information to user space
+ff7dd23 msm: cpp: Check for validity of processed frame in cpp timeout
+5a8c419 msm: camera: Synchronize jpeg ISR and userspace call
+86d5603 msm: camera: jpegdma: Check for compat config
+f76f66a msm: jpeg: DMA V4L2 driver changes
+629606c Move camera_v2z to camera_v2 for make cherry-picks easier.
+2368dac Regenerate defconfigs.
+defd4e1 arm64/crypto: use crypto instructions to generate AES key schedule
+1864771 arm64: crypto: increase AES interleave to 4x
+7943766 arm64/crypto: issue aese/aesmc instructions in pairs
+3fe004a arm64: crypto: Change priority of arm64 aes cipher.
+4ba2cb2 crypto: arm64/crc32 - bring in line with generic CRC32
+3c1e469 crypto: crc32 - Add ARM64 CRC32 hw accelerated module
+2ab9474 perf:arm64: fix lockdep warning when handling CPU_STARTING.
+2145cfd perf:arm64: fix pmu percpu irq handling at hotplug.
+a06248e perf: arm64: fix RCU usage on pmu resume from low-power
+1e3901e perf: arm64: implement CPU_PM notifier
+7dacca9 Revert "Perf: arm64: support hotplug and power collapse"
+f5530ee Revert "Perf: arm64: fix disable of pmu irq during hotplug"
+e0b1dd0 Revert "Perf: arm64: restore registers after reset"
+8bef9e4 Revert "Perf: arm64: stop counters when going into hotplug"
+df73278 Set the correct CONFIG_NR_CPUS for msm8996
+f164e41 fpc1020_ree: Use int for sysfs longtap switch
+d32cf41 fpc1020_ree: Add a sysfs interface for the longtap
+da3cd89 Prevent potential double frees in sg driver
+41a330a Enable CONFIG_SDCARD_FS.
+5208afc Don't build WLAN driver as a module.
+0974ecd ARM64: configs: z2_row: Remove more debug CONFIGs.
+8d40fc5 ARM64: configs: z2_plus: Add back CONFIG_GT9XX_TOUCHPANEL_DEBUG
+08a71ba sched: Prevent recursion in io_schedule()
+536018e ANDROID: trace: net: use %pK for kernel pointers
+d7a61e3 USB: digi_acceleport: do sanity checking for the number of ports
+f7e7650 USB: cdc-acm: more sanity checking
+eb1f6cd tty: n_hdlc: get rid of racy n_hdlc.tbuf
+5710ca2 TTY: n_hdlc, fix lockdep false positive
+5a4a3fd ANDROID: mmc: move to a SCHED_FIFO thread
+e9c2248 Input: gtco - fix crash on detecting device without endpoints
+6287392 Input: aiptek - fix crash on detecting device without endpoints
+080440f ANDROID: keychord: Fix for a memory leak in keychord.
+6e0c21d ANDROID: keychord: Fix a slab out-of-bounds read.
+6b12d3d ANDROID: keychord: Fix races in keychord_write.
+83f4cb3 mm: Tighten x86 /dev/mem with zeroing reads
+12b1871 Fixing an issue that caused DEVPORT to always be set.
+fe508dc zram: do not use copy_page with non-page aligned address
+5c30662 cpuidle: don't disable cpuidle when entering suspend
+f674330 Remove unused/debug CONFIGs
+6bdc9af usb: dwc3: Don't kill USB when CONFIG_IPC_LOGGING is disabled
+25ba35f removing msm calls to trace_printk
+fd818fc drivers: video: Add bounds checking in fb_cmap_to_user
+affd0b9 ANDROID: video: adf: Avoid directly referencing user pointers
+8c8b243 lowmemorykiller: account for unevictable pages
+34fedb2 ion: adjust system heap pool orders
+94e418e android: binder: remove useless preemption disable on target_wait
+2b8a4f9 Revert "power:qpnp-charger: extended charge time from 30s to 100s when battery status is near to full"
+17508c5 drivers: cnss: Add bdwlan param
+f4da5ea usbnet: cleanup after bind() in probe()
+d6879cf ASoC: core: Increase max name size
+0a894d2 asoc/msm: Reduce min capture size
+79b5958 ALSA: timer: Fix race between read and ioctl
+babeb3c ALSA: timer: Fix missing queue indices reset at SNDRV_TIMER_IOCTL_SELECT
+6a2291b ALSA: hrtimer: Fix stall by hrtimer_cancel()
+5fbd8f1 ASoC: codecs: tfa98xx: Disable debug
+a77f4f1 KEYS: Change the name of the dead type to ".dead" to prevent user access
+2b687dd KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings
+82d1472 KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings
+1623ef0 mm: fix new crash in unmapped_area_topdown()
+bb46849 Allow stack to grow up to address space limit
+8875747 mm/mempolicy.c: fix error handling in set_mempolicy and mbind.
+21ad36a shmem: fix shm fallocate() list corruption
+6058141 mm: swap_ratio: Only call trace_printk() in debug
+279613d lib: lz4: fixed zram with lz4 on big endian machines
+7b7de10 sched: Fix integer overflow in sched_update_nr_prod()
+4ddb466 Revert "workqueue: Fix permission for power_efficient workqueue"
+e8d8595 sched: avoid migrating when softint on tgt cpu should be short
+527897f sched: avoid scheduling RT threads on cores currently handling softirqs
+7ebace3 sched/rt: Avoid moving rt task if destination CPU does not run low priority task.
+fd24a99 perf/core: Fix concurrent sys_perf_event_open() vs. 'move_group' race
+a43b8cc cpu-hotplug: convert cpu_hotplug_disabled to a counter
+d063aae Silences WLAN, PCIe, and CPU suspend state kernel messages
+ce9a9b5 ipc/shm: Fix shmat mmap nil-page protection
+9726661 crypto: ahash - Fix EINPROGRESS notification callback
+143b964 Fix all the remaining GCC 7.x warnings
+4e32de0 msm: vidc: Fix Wparentheses warning
+8d1407b Properly fix use of uninitialized variables
+67d3278 msm:vidc: Roll back changes introduced by commit e1abc85c181b0cf5935a243b9f6a3418bbac50d6
+435a289 camera_v2z: Fix GCC 7.x warnings
+274f024 msm: camera: sensor: Fix memory leaks when sensor probe fails
+5ff95eb misc: Fix some memory leaks
+d24e0e8 drivers: media: msm: camera_v2: fix bool-compare warning
+91e4500 Fix GCC 7.x warnings
+f9fe39e Bluetooth: Properly check L2CAP config option output buffer length
+0c1e0d7 driver core: platform: fix race condition with driver_override
+d2fd2d8 sctp: validate chunk len before actually using it
+3316fbc sctp: deny peeloff operation on asocs with threads sleeping on it
+cbd0698 sctp: avoid BUG_ON on sctp_wait_for_sndbuf
+69d04c3 sctp: do not inherit ipv6_{mc|ac|fl}_list from parent
+eee4190 netlink: Fix dump skb leak/double free
+f3794bf netfilter: x_tables: check for size overflow
+c50f66c UPSTREAM: packet: fix races in fanout_add()
+f4ceceb net/llc: avoid BUG_ON() in skb_orphan()
+6f382ff net: llc: use correct size for sysctl timeout entries
+31057ad irda: Fix lockdep annotations in hashbin_delete().
+cc11288 ipv6: Prevent overrun when parsing v6 header options
+f77461b ip6_gre: fix ip6gre_err() invalid reads
+1f0ca67 BACKPORT: tcp: avoid infinite loop in tcp_splice_read()
+1467379 ping: implement proper locking
+d044899 dccp/tcp: do not inherit mc_list from parent
+2b34cff ipv4: Don't do expensive useless work during inetdev destroy.
+1220bfa net: ipc_router: Fix memory leaks when releasing a remote port
+a08b386 timerfd: Protect the might cancel mechanism proper
+1f63aba sysctl: Drop reference added by grab_header in proc_sys_readdir
+c557969 tmpfs: clear S_ISGID when setting posix ACLs
+e338618 ANDROID: mnt: Fix next_descendent
+0465c95 ANDROID: mnt: remount should propagate to slaves of slaves
+47b9768 pipe: limit the per-user amount of pages allocated in pipes
+292f5f4 ANDROID: fs: Export vfs_rmdir2
+5cd4a42 ANDROID: fs: Export free_fs_struct and set_fs_pwd
+f2e035c mm: larger stack guard gap, between vmas
+5187840 FROMLIST: f2fs: give a try to do atomic write in -ENOMEM case
+53e3d6c FROMLIST: f2fs: don't give partially written atomic data from process crash
+02f6e58 FROMLIST: f2fs: add ioctl to expose current features
+9c28ced UPSTREAM: ext4: fix fencepost in s_first_meta_bg validation
+2fd5f40 ext4: fix condition of validate s_first_meta_bg
+4d73875 ext4: validate s_first_meta_bg at mount time
+a7e0e53 UPSTREAM: ext4 crypto: fix some error handling
+6da3447 UPSTREAM: ext4: enforce online defrag restriction for encrypted files
+c64a4c7 UPSTREAM: fscrypto: lock inode while setting encryption policy
+fe8bfb5 UPSTREAM: fscrypto: require write access to mount to set encryption policy
+a84782f ANDROID: ext4 crypto: Disables zeroing on truncation when there's no key
+1e42669 ext4: fix deadlock during page writeback
+000608e ext4: fix data exposure after a crash
+298eaee UPSTREAM: fscrypt: fix context consistency check when key(s) unavailable
+160765e UPSTREAM: fscrypt: fix renaming and linking special files
+dfe7a5e UPSTREAM: fscrypto: add authorization check for setting encryption policy
+0f624cc UPSTREAM: fscrypt: remove broken support for detecting keyring key revocation
+1651fce UPSTREAM: ext4 crypto: add missing locking for keyring_key access
+3bf6639 UPSTREAM: fscrypt: avoid collisions when presenting long encrypted filenames
+4767497 UPSTREAM: ext4 crypto: don't let data integrity writebacks fail with ENOMEM
+f9a7ec8 UPSTREAM: ext4/fscrypto: avoid RCU lookup in d_revalidate
+f21e50b UPSTREAM: ext4 crypto: use dget_parent() in ext4_d_revalidate()
+88c5834 UPSTREAM: ext4 crypto: revalidate dentry after adding or removing the key
+b5b9130 vfs: Add permission2 for filesystems with per mount permissions
+8119d97 fs/exec: fix use after free in execve
+4873d4c merge d_materialise_unique() into d_splice_alias()
+ea15cd1 vfs: Add setattr2 for filesystems with per mount permissions
+5f9a16a net: add length argument to skb_copy_and_csum_datagram_iovec
+643e889 ipv6: fix out of bound writes in __ip6_append_data()
+d46e398 ipx: call ipxitf_put() in ioctl error path
+807a4ea bpf: don't let ldimm64 leak map addresses on unprivileged
+cd1135a ipv6/dccp: do not inherit ipv6_mc_list from parent
+7505f3b mm: migrate dirty page without clear_page_dirty_for_io etc
+9bde602 net: ping: check minimum size on ICMP header length
+4b80de2 USB: cypress_m8: add endpoint sanity check
+1303139 USB: mct_u232: add sanity checking in probe
+d4c23c3 fs/exec.c: account for argv/envp pointers
+660fb92 selinux: fix off-by-one in setprocattr
+f14257e xfrm: policy: check policy direction value
+8dc5232 ANDROID: sdcardfs: Add missing break
+ddfc533 ANDROID: Sdcardfs: Move gid derivation under flag
+60c17c2 ANDROID: sdcardfs: override credential for ioctl to lower fs
+59077ab ANDROID: sdcardfs: Remove unnecessary lock
+39befab ANDROID: sdcardfs: use mount_nodev and fix a issue in sdcardfs_kill_sb
+4e80ee3 ANDROID: sdcardfs: remove dead function open_flags_to_access_mode()
+af25158 ANDROID: sdcardfs: d_splice_alias can return error values
+ca4416b ANDROID: sdcardfs: Check for NULL in revalidate
+fc54e25 ANDROID: sdcardfs: Add linux/kref.h include
+cfa009a ANDROID: sdcardfs: Move top to its own struct
+056ab22 ANDROID: sdcardfs: fix sdcardfs_destroy_inode for the inode RCU approach
+34c8879 ANDROID: sdcardfs: Don't iput if we didn't igrab
+2283e27 ANDROID: sdcardfs: Call lower fs's revalidate
+65fe0d8 ANDROID: sdcardfs: Avoid setting GIDs outside of valid ranges
+83ae6b0 ANDROID: sdcardfs: Copy meta-data from lower inode
+a5b8729 Revert "Revert "Android: sdcardfs: Don't do d_add for lower fs""
+7514427 ANDROID: sdcardfs: Use filesystem specific hash
+d6b7604 Revert "Android: sdcardfs: Don't do d_add for lower fs"
+3cb2ce9 Android: sdcardfs: Don't complain in fixup_lower_ownership
+611159f Android: sdcardfs: Don't do d_add for lower fs
+93e3133 ANDROID: sdcardfs: ->iget fixes
+ac125e7 Android: sdcardfs: Change cache GID value
+b41f1f7 ANDROID: sdcardfs: Directly pass lower file for mmap
+6b4d490 ANDROID: sdcardfs: update module info
+3e2f0f3 ANDROID: sdcardfs: use d_splice_alias
+5237627 ANDROID: sdcardfs: add read_iter/write_iter opeations
+4a01b18 ANDROID: sdcardfs: fix ->llseek to update upper and lower offset
+8bfd2fb ANDROID: sdcardfs: copy lower inode attributes in ->ioctl
+aaa8931 ANDROID: sdcardfs: remove unnecessary call to do_munmap
+9e14977 ANDROID: sdcardfs: Fix style issues in macros
+d427832 ANDROID: sdcardfs: Use seq_puts over seq_printf
+f4f6bec ANDROID: sdcardfs: Use to kstrout
+599ec164 ANDROID: sdcardfs: Use pr_[...] instead of printk
+0fc3555 ANDROID: sdcardfs: remove unneeded null check
+e5f84cb ANDROID: sdcardfs: Fix style issues with comments
+752b384 ANDROID: sdcardfs: Fix formatting
+d51b7ab ANDROID: sdcardfs: correct order of descriptors
+d2a0a3f ANDROID: sdcardfs: Fix gid issue
+d1e6edc ANDROID: sdcardfs: Use tabs instead of spaces in multiuser.h
+4f06f80 ANDROID: sdcardfs: Remove uninformative prints
+f77a917 ANDROID: sdcardfs: move path_put outside of spinlock
+8fba0ad ANDROID: sdcardfs: Use case insensitive hash function
+15e2574 ANDROID: sdcardfs: declare MODULE_ALIAS_FS
+5819f7e ANDROID: sdcardfs: Get the blocksize from the lower fs
+79d2547 ANDROID: sdcardfs: Use d_invalidate instead of drop_recurisve
+2821007 ANDROID: sdcardfs: Switch to internal case insensitive compare
+8992e2c ANDROID: sdcardfs: Use spin_lock_nested
+5ded642 ANDROID: sdcardfs: Replace get/put with d_lock
+2c17e0d ANDROID: sdcardfs: rate limit warning print
+cf46342 ANDROID: sdcardfs: Fix case insensitive lookup
+432304b sdcardfs: limit stacking depth
+efafe9e ANDROID: sdcardfs: support direct-IO (DIO) operations
+3000248 ANDROID: sdcardfs: implement vm_ops->page_mkwrite
+d565dd35 ANDROID: sdcardfs: Don't bother deleting freelist
+fb8a041 ANDROID: sdcardfs: Add missing path_put
+89229d9 ANDROID: sdcardfs: Fix incorrect hash
+8eaa1e7 ANDROID: sdcardfs: Switch strcasecmp for internal call
+5aeacb23 ANDROID: sdcardfs: switch to full_name_hash and qstr
+e138dc2 ANDROID: sdcardfs: Add GID Derivation to sdcardfs
+cd34ad4 ANDROID: sdcardfs: Remove redundant operation
+f2afcee ANDROID: sdcardfs: add support for user permission isolation
+5f1e29e ANDROID: sdcardfs: Refactor configfs interface
+788b4a9 ANDROID: sdcardfs: Allow non-owners to touch
+c489da3 ANDROID: sdcardfs: Fix locking issue with permision fix up
+b5ba19f sdcardfs: Use per mount permissions
+45fdca9 sdcardfs: Add gid and mask to private mount data
+f940296 sdcardfs: User new permission2 functions
+6a17d02 sdcardfs: Move directory unlock before touch
+43b4b0b sdcardfs: fix external storage exporting incorrect uid
+8a22562 sdcardfs: Added top to sdcardfs_inode_info
+4a7d424 sdcardfs: Switch package list to RCU
+fce41d9 sdcardfs: Fix locking for permission fix up
+5307382 sdcardfs: Check for other cases on path lookup
+f81de74 sdcardfs: override umask on mkdir and create
+17479ce ANDROID: sdcardfs: fix itnull.cocci warnings
+53fd0086 sdcardfs: Truncate packages_gid.list on overflow
+33670d1 vfs: change d_canonical_path to take two paths
+77ca486 ANDROID: mnt: Fix freeing of mount data
+036c4e9 vfs: Allow filesystems to access their private mount data
+d41b78c mnt: Add filesystem private data to mount points
+1b5f0b2 workqueue: Fix permission for power_efficient workqueue
+c1324f8 power: smbcharger: queue work on system_power_efficient_wq
+17eda45 cpufreq: interactive governor drops bits in time calculation
+bb0ddba Reset to clean qpnp-led driver and add "qcom,use-blink" to leds in dtb
+a64f54e .gitignore: Fix botched merge
+585aaa9 Enable -O2 optimizations.
