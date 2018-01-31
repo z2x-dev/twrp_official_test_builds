@@ -1,2 +1,2 @@
-All Pre-Release is [here !](https://github.com/z2x-dev/twrp_official_test_builds/releases/tag/TWRP_Official_3.1.1.0)
+All Pre-Release is [here !](https://github.com/z2x-dev/twrp_official_test_builds/releases)
 

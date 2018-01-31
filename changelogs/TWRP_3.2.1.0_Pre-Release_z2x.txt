@@ -1,0 +1,274 @@
+# Kernel Changelogs
+
+5fe15d9 (HEAD -> lineage-14.1-020118, origin/lineage-14.1-020118, origin/cm-14.1, origin/HEAD, cm-14.1) z2x: defconfig: Update from  synced z2 kernel
+757a84a Revert "rcu: Restrict nocb kthreads to power cluster"
+38ebafb kthread: Force all non-percpu kthreads onto the power cluster
+ca99129 ANDROID: scsi: Add segment checking in sg_read
+e4c76d4 Bluetooth: cmtp: cmtp_add_connection() should verify that it's dealing with l2cap socket
+3211cd7 ALSA: timer: Fix zero-division by continue of uninitialized instance
+29cc8cc ALSA: timer: Call notifier in the same spinlock
+65d9c8a v4l2: Refactor, fix security bug in compat ioctl32
+6af066c Revert "media: v4l2-compat-ioctl32: memset stack union in compat ioctl"
+d5a498d ANDROID: usb: gadget: f_mtp: Return error if count is negative
+fed3ca4 msm: sde: Remove output fence object after user request completed
+67287ac Bluetooth: bnep: bnep_add_connection() should verify that it's dealing with l2cap socket
+5306859 brcmfmac: fix possible buffer overflow in brcmf_cfg80211_mgmt_tx()
+b2f3357 mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d()
+d2e38b3 dentry name snapshots
+aeab4bf kthread: Force all non-percpu kthreads onto the power cluster
+0cab5fd workqueue: Schedule workers on CPU0 or CPU0/CPU1 by default
+26ae777 Revert "msm: mdss: Restrict display commit thread to power cluster"
+a603f42 thermal: tsens: Switch from usleep_range() to msleep
+2da089f Run all RCU threads at RT prio 2
+8f063ca8 rcu: Tell the compiler that rcu_state_p is immutable
+605a0c7 rcu: Eliminate a few RCU_BOOST #ifdefs in favor of IS_ENABLED()
+a377154 rcu: Convert ACCESS_ONCE() to READ_ONCE() and WRITE_ONCE()
+4fd4073 rcu: Control grace-period delays directly from value
+7456fd9 rcu: Associate quiescent-state reports with grace period
+9fdc760 rcu: Yet another fix for preemption and CPU hotplug
+73fb3b2 rcu: Add diagnostics to grace-period cleanup
+1c6d8be rcu: Handle outgoing CPUs on exit from idle loop
+afc216c rcu: Eliminate ->onoff_mutex from rcu_node structure
+24a2869 rcu: Process offlining and onlining only at grace-period start
+0469d87 Revert "rcu: Move early boot callback tests earlier"
+83e13d8 rcu: Move rcu_report_unblock_qs_rnp() to common code
+c10e4da rcu: Rework preemptible expedited bitmask handling
+dffe0e8 rcu: Remove event tracing from rcu_cpu_notify(), used by offline CPUs
+10f1ac4 rcu: Provide diagnostic option to slow down grace-period initialization
+b929401 rcu: Detect stalls caused by failure to propagate up rcu_node tree
+fe08fd8 rcu: Eliminate empty HOTPLUG_CPU ifdef
+005a809 rcu: Simplify sync_rcu_preempt_exp_init()
+fda43af rcu: Put all orphan-callback-related code under same comment
+c0122df rcu: Consolidate offline-CPU callback initialization
+d3beefa rcu: Remove redundant check of cpu_online()
+a824b86 rcu: Get rcu_sched_force_quiescent_state() where it belongs
+5e5c227 rcu: Add boot-up check for non-default CONFIG_RCU_FANOUT_LEAF values
+ed5df72 rcu: Use IS_ENABLED() to simplify rcu_bootup_announce_oddness()
+710f062 rcu: Improve diagnostics for blocked critical sections in irq
+56261c6 rcu: Use IS_ENABLED() to CONFIG_RCU_FANOUT_EXACT #ifdef
+d902dc5 rcu: Move early boot callback tests earlier
+8df4d58 rcu: Move early-boot callbacks to no-CBs lists for no-CBs CPUs
+79ef437 rcu: Tighten up affinity and check for sysidle
+656565a rcu: Remove fastpath from __rcu_process_callbacks()
+59658c3 rcu: Remove unnecessary condition check in rcu_qsctr_help()
+660a0bb rcu: Fixes to NO_HZ_FULL sysidle accounting
+b53da9c rcutorture: Make consistent use of variables
+dc8a6be rcu: Add Kconfig option to expedite grace periods during boot
+04c2d95 rcu: Update from rcu_expedited variable to rcu_gp_is_expedited()
+545709c rcu: Add rcu_expedite_gp() and rcu_unexpedite_gp() to rcutorture
+3d71111 rcu: Provide rcu_expedite_gp() and rcu_unexpedite_gp()
+955fa12 rcu: Fix a couple of typos in rcu_all_qs() comment header
+34d3c37 rcu: Avoid clobbering early boot callbacks
+bb6ee35 rcu: Refine diagnostics for lacking kthread for no-CBs callbacks
+54691e3 rcu: Prevent early-boot RCU callbacks from splatting
+5e5c80e rcu: Wire ->rda pointers at compile time
+41fea02 rcu: Abstract default callback-list initialization from init_callback_list()
+58608d4 rcu_tree: Avoid touching rnp->completed when a new GP is started
+b1fd625 rcu: Consolidate rcu_synchronize and wakeme_after_rcu()
+ad528a4 rcu: use %*pb[l] to print bitmaps including cpumasks and nodemasks
+4208365 rcu: Clear need_qs flag to prevent splat
+7b12f14 rcu: Initialize tiny RCU stall-warning timeouts at boot
+8e87da7 rcu: Fix RCU CPU stall detection in tiny implementation
+8fd8d38 rcu: Add GP-kthread-starvation checks to CPU stall warnings
+bf9af92a rcu: Make cond_resched_rcu_qs() apply to normal RCU flavors
+4075667 rcutorture: Add more diagnostics in rcu_barrier() test failure case
+946dc9e rcutorture: Check from beginning to end of grace period
+ea15f34 rcu: Remove redundant rcu_batches_completed() declaration
+2c2f87a rcutorture: Drop rcu_torture_completed() and friends
+b8c81a7 rcutorture: Use unsigned for Reader Batch computations
+5dee51c rcu: Make _batches_completed() functions return unsigned long
+06eb19a rcu: Handle gpnum/completed wrap while dyntick idle
+84a38e8 rcu: Improve diagnostics for spurious RCU CPU stall warnings
+219e269 rcu: Make RCU_CPU_STALL_INFO include number of fqs attempts
+8fe94f3 rcu: Make SRCU optional by using CONFIG_SRCU
+7a706d3 rcu: Expand SRCU ->completed to 64 bits
+a51b60c rcu: Remove redundant callback-list initialization
+f395701 rcu: Don't scan root rcu_node structure for stalled tasks
+ae6ed07 rcu: Revert "Allow post-unlock reference for rt_mutex" to avoid priority-inversion
+aa7e859 rcu: Note quiescent state when CPU goes offline
+cb2cd7e rcu: Don't bother affinitying rcub kthreads away from offline CPUs
+b8cc44c rcu: Don't initiate RCU priority boosting on root rcu_node
+78b73be rcu: Don't spawn rcub kthreads on root rcu_node structure
+feebbd7 rcu: Make use of rcu_preempt_has_tasks()
+e160ac7 rcu: Shorten irq-disable region in rcu_cleanup_dead_cpu()
+33b57f0 rcu: Don't migrate blocked tasks even if all corresponding CPUs offline
+1222d39 rcu: Make rcu_read_unlock_special() propagate ->qsmaskinit bit clearing
+b0f0dff rcu: Abstract rcu_cleanup_dead_rnp() from rcu_cleanup_dead_cpu()
+6787a58 rcu: Rename "empty" to "empty_norm" in preparation for boost rework
+eacc677e rcu: Protect rcu_boost() lockless accesses with ACCESS_ONCE()
+bcf3f2d rcu: Remove "select IRQ_WORK" from config TREE_RCU
+de3ea35 rcu: Fix rcu_barrier() race that could result in too-short wait
+9ba505e tiny_rcu: Directly force QS when call_rcu_[bh|sched]() on idle_task
+0a79319 rcu: Fix invoke_rcu_callbacks() comment
+dbc564b rcu: Remove redundant rcu_is_cpu_rrupt_from_idle() from tiny RCU
+810ae42 rcu: Make rcu_nmi_enter() handle nesting
+63d185f rcu: Fix FIXME in rcu_tasks_kthread()
+b787270 rcutorture: Fix rcu_torture_cbflood() memory leak
+1229d92 rcu: Use DEFINE_PER_CPU_SHARED_ALIGNED for rcu_data
+3aca58c rcu: Remove rcu_dynticks * parameters when they are always this_cpu_ptr(&rcu_dynticks)
+44703a4 rcu: Fix for rcuo online-time-creation reorganization bug
+11e266b rcu: Remove redundant TREE_PREEMPT_RCU config option
+aa566ac rcu: Avoid IPIing idle CPUs from synchronize_sched_expedited()
+2a5a74a rcu: Remove CONFIG_RCU_CPU_STALL_VERBOSE
+bd9ff13 BACKPORT: kernel: add kcov code coverage
+bcc736a rcu: Don't disable CPU hotplug during OOM notifiers
+fc81382 BACKPORT: rcu: Optionally run grace-period kthreads at real-time priority
+fe92b2c BACKPORT: rcu: Unify boost and kthread priorities
+765dff2 BACKPORT: rcu: Move RCU_BOOST variable declarations, eliminating #ifdef
+e6dc817 BACKPORT: rcu: Optionally run grace-period kthreads at real-time priority
+3141b05 BACKPORT: rcu: Unify boost and kthread priorities
+d7b5ec7 BACKPORT: rcu: Move RCU_BOOST variable declarations, eliminating #ifdef
+0e6be79 configs: z2: enable RCU_BOOST
+8d2a502 PM: devfreq: Use high priority workqueue
+a79f63e adreno_tz: Remove unnecessary devfreq NULL check in tz_handler()
+b8031eb msm: mpm: disable debugging
+a59aad0 qcom: mpm: use interruptible wait to reduce load avg
+5a4634c drivers: mdss: queue input handler functions to a high prio wq
+37abad2 arm64: mmu: Fix alloc_init_pud section mismatches
+2499074 cpu: Don't allow CPUs in the power cluster to be unplugged
+a4907a4 soc: qcom: complete clear the memory before freeing it up.
+00b3b57 soc: qcom: rpm: Change driver memory allocation to use GFP_NOIO
+81a49e4 soc: q6dspv2: apr: fix client registration refcount
+2f07464 soc: qcom: Do not clear segments if pil boot failed in memory allocation
+9088402 soc: qcom: Skip clearing modem FW region post load failure
+0f32b46 perf: disable cross_hotplug for l2 cache pmu.
+5b788c5 memshare: Fix possible memory leak
+7c6ac39 soc: Fix Kconfig warnings
+836aa4c UPSTREAM: arm64: crypto: reduce priority of core AES cipher
+b5b3029 crypto: arm64/aes-ctr - fix NULL dereference in tail processing
+6f6b484 DTS: Reduce msm-core polling rate to 500ms
+5c65551 ARM: dts: msm: Update temperature threshold limits for EA for 8996
+d89000b DTS: Reduce msm-core polling rate to 100ms
+196842c camera_v2z: Update to LA.HB.1.3.2-40600-8x96.0
+61758f7 mdss: livedisplay: Fix memory leaks in mdss_livedisplay_update()
+7028ec2 mdss: livedisplay: Remove deprecated CMD_CLK_CTRL flag
+18e8c98 Restrict kswapd to power cluster
+21302d7 rcu: Restrict nocb kthreads to power cluster
+75963ec configs: z2: Enable CONFIG_SCHED_HMP_CSTATE_AWARE
+6cb17db alarmtimer : Remove power_on_alarm_init
+3ed1c8e alarm : Change disable irq into cancel alarm
+444a036 UPSTREAM: all arches, signal: move restart_block to struct task_struct
+7c70d92 alarmtimer: don't rate limit one-shot timers
+2477ed1 alarmtimer: Rate limit periodic intervals
+e8ac4e8 msm: vidc: disable CPU L2 cache PC during video sessions
+acfee33 sched/loadavg: Avoid loadavg spikes caused by delayed NO_HZ accounting
+c529f6d drivers: cpufreq: Use interruptible waits
+1c92e17 msm: load average improvements
+f42d117 drivers: block: Restrict loop commit thread to power cluster
+ffb8295 drivers: block: Use interruptible wait in loop.c
+beb1e64 defconfig: enable new arm64 acc. CRC routine
+b9513a7 defconfig: Enable JUMP_LABEL
+50fab2b max86x00: fix log spam.
+11a1724 mdss: Back to stock saturation default value on z2_row.
+7223656 defconfig: Boot with Noop
+d39ae2a block: queue work on power efficient wq
+3631b0d power: bcl: queue work on system_power_efficient_wq
+5728939 drivers: thermal: queue work on system_power_efficient_wq
+b978d71 net: socket: fix recvmmsg not returning error from sock_error
+9c474a3 ALSA: pcm: prevent UAF in snd_pcm_info
+542d8bc BACKPORT: pids: make task_tgid_nr_ns() safe
+a9d479b drivers: staging: Update qcacld-2.0 driver
+af9f25c Merge tag 'LA.UM.5.5.r1-06300-8x96.0' into HEAD
+00f8085 CHROMIUM: cpufreq: interactive: calculate load before freq change
+4430c3e cpufreq: interactive: Remove the jump_to_max hack
+72ed023 tcp: fix tcp_mtu_probe() vs highest_sack
+bec9906 f2fs: deny accessing encryption policy if encryption is off
+8b96d2b9 f2fs: inject fault in inc_valid_node_count
+a98dfaf f2fs: expose quota information in debugfs
+2916cbd f2fs: separate nat entry mem alloc from nat_tree_lock
+f7e3398 f2fs: validate before set/clear free nat bitmap
+b0febf3 f2fs: avoid opened loop codes in __add_ino_entry
+8b0e6e0 f2fs: apply write hints to select the type of segments for buffered write
+7408805 f2fs: introduce scan_curseg_cache for cleanup
+9545b43 f2fs: optimize the way of traversing free_nid_bitmap
+1152f66 f2fs: keep scanning until enough free nids are acquired
+50ce90c f2fs: trace checkpoint reason in fsync()
+9ae89c2 f2fs: keep isize once block is reserved cross EOF
+44017b1 f2fs: avoid race in between GC and block exchange
+eeb5c79 f2fs: save a multiplication for last_nid calculation
+0f92ec6 f2fs: fix summary info corruption
+84f6658 f2fs: remove dead code in update_meta_page
+0094230 f2fs: remove unneeded semicolon
+09b52e9 f2fs: don't bother with inode->i_version
+6f701ff f2fs: check curseg space before foreground GC
+12aff44 f2fs: use rw_semaphore to protect SIT cache
+b9dfb33 f2fs: support quota sys files
+8460ff0 f2fs: add quota_ino feature infra
+9ff1ef7 f2fs: optimize __update_nat_bits
+417e8c5 f2fs: modify for accurate fggc node io stat
+d7e3163 Revert "f2fs: handle dirty segments inside refresh_sit_entry"
+3d0e35b f2fs: add a function to move nid
+c394bd6 f2fs: export SSR allocation threshold
+55ccb43 f2fs: give correct trimmed blocks in fstrim
+7470312 f2fs: support bio allocation error injection
+7d30720 f2fs: support get_page error injection
+ae08081 f2fs: add missing sysfs description
+628331d f2fs: support soft block reservation
+6b2a05e f2fs: handle error case when adding xattr entry
+ec155a9 f2fs: support flexible inline xattr size
+33c6627 f2fs: show current cp state
+58f51f2 f2fs: add missing quota_initialize
+346e23f f2fs: show # of dirty segments via sysfs
+056db6d f2fs: stop all the operations by cp_error flag
+e056fb9 f2fs: remove several redundant assignments
+5a42ec7 f2fs: avoid using timespec
+7906a1e f2fs: fix to correct no_fggc_candidate
+ee7512e Revert "f2fs: return wrong error number on f2fs_quota_write"
+51b4d80 f2fs: remove obsolete pointer for truncate_xattr_node
+2586d8b f2fs: retry ENOMEM for quota_read|write
+0521d08 f2fs: limit # of inmemory pages
+816c1c3 f2fs: update ctx->pos correctly when hitting hole in directory
+79711eb f2fs: relocate readahead codes in readdir()
+914c039 f2fs: allow readdir() to be interrupted
+7f93892 f2fs: trace f2fs_readdir
+8a6e671 f2fs: trace f2fs_lookup
+75b9262 f2fs: skip searching non-exist range in truncate_hole
+acdf85f FIX: f2fs: expose some sectors to user in inline data or dentry case
+da1f8b9 f2fs: avoid stale fi->gdirty_list pointer
+4e7ec1a f2fs/crypto: drop crypto key at evict_inode only
+2cb9aef f2fs: fix to avoid race when accessing last_disk_size
+fd7ef54 f2fs: Fix bool initialization/comparison
+631b5d9 f2fs: give up CP_TRIMMED_FLAG if it drops discards
+273f884 f2fs: trace f2fs_remove_discard
+5b1b450 f2fs: reduce cmd_lock coverage in __issue_discard_cmd
+1545037 f2fs: split discard policy
+eab0f6b f2fs: wrap discard policy
+a970396 f2fs: support issuing/waiting discard in range
+bdf9104 f2fs: fix to flush multiple device in checkpoint
+76dc063 f2fs: enhance multiple device flush
+762685b f2fs: fix to show ino management cache size correctly
+a22d9ce f2fs: drop FI_UPDATE_WRITE tag after f2fs_issue_flush
+cc115e6 f2fs: obsolete ALLOC_NID_LIST list
+10ac791 f2fs: convert inline data for direct I/O & FI_NO_PREALLOC
+c6321a0 f2fs: allow readpages with NULL file pointer
+1be93ba f2fs: show flush list status in sysfs
+8f8d77e f2fs: introduce read_xattr_block
+636f6fd f2fs: introduce read_inline_xattr
+c2a50c1 Revert "f2fs: reuse nids more aggressively"
+c8bfec9 Revert "f2fs: node segment is prior to data segment selected victim"
+c2a50c1 Revert "f2fs: reuse nids more aggressively"
+a970396 f2fs: support issuing/waiting discard in range
+bdf9104 f2fs: fix to flush multiple device in checkpoint
+76dc063 f2fs: enhance multiple device flush
+762685b f2fs: fix to show ino management cache size correctly
+a22d9ce f2fs: drop FI_UPDATE_WRITE tag after f2fs_issue_flush
+cc115e6 f2fs: obsolete ALLOC_NID_LIST list
+10ac791 f2fs: convert inline data for direct I/O & FI_NO_PREALLOC
+c6321a0 f2fs: allow readpages with NULL file pointer
+1be93ba f2fs: show flush list status in sysfs
+8f8d77e f2fs: introduce read_xattr_block
+636f6fd f2fs: introduce read_inline_xattr
+c2a50c1 Revert "f2fs: reuse nids more aggressively"
+c8bfec9 Revert "f2fs: node segment is prior to data segment selected victim"
+d623690 Fix qpnp-fg log spam:
+c49ba6a Back to Qualcomm thermal-engine.
+a910344 fpc_1020: Remove HZ references assuming it's 100
+9a49aa1 fpc1020_ree: "Linuxify"
+e67acd8 Revert CPU underclock in both clusters.
+c3092be alarmtimer : Remove power_on_alarm_init
+ae94fde alarm : Change disable irq into cancel alarm
+
+
+# Device Changelogs
+133cb16 (HEAD -> android-7.1, origin/android-7.1, origin/HEAD) z2x: Upgrade device system to F2FS
+34e7ab4 z2x: Add extra languages support
